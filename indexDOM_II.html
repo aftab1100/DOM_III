@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversing/Search Up/Down</title>
+  </head>
+  <body>
+    <!--Traversing down-->
+    <div class="gp">
+      Grand Parent
+      <div class="p">
+        Parent
+        <div class="c">
+          Child
+          <div class="gc">Grand Child-1</div>
+          <div class="gc1">Grand Child-2</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      gc = document.querySelector("div.gc");
+      var gc2 = document.querySelector("div.gc1");
+      //Testing part
+      //console.log(gc);
+      gc.closest("div.gp").style.border = "1px solid black";
+      gc.closest(".p").style.border = "1px solid red";
+      gc.closest(".c").style.border = "1px solid green";
+
+      gc2.closest(".gc1").style.border = "1px solid blue";
+
+      //Variable decleration
+      //It is called hoisting
+      var gc;
+    </script>
+  </body>
+</html>
